@@ -4,17 +4,17 @@
 #include "string-calculator.h"
 
 TEST_CASE("Test 1: zero number ") {
-  cout << "Test 1 : " <<Add("") 
+  cout << "Test 1 : " <<Add("")<<"\n"; 
 }
 
 TEST_CASE("Test 2: 1 number ") {
-  cout << "Test 1 : " <<Add("1") 
+  cout << "Test 1 : " <<Add("1") <<"\n"; 
 }
 
 TEST_CASE("Test 3: 2 number ") {
-  cout << "Test 1 : " <<Add("1,2") 
+  cout << "Test 1 : " <<Add("1,2") <<"\n"; 
 }
 
 TEST_CASE("Test 4: 3 number with multi delimit") {
-  cout << "Test 1 : " <<Add("1\n2,3") 
+  cout << "Test 1 : " <<Add("1\n2,3") <<"\n"; 
 }
