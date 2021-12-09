@@ -8,7 +8,7 @@ using namespace std;
 
 vector<string> splitStringMultiDelimit(string inputString)
 {
-    std::string const delims{ "\n," };
+    string const delims{ "\n," };
 
     vector<string> strNums;
 
@@ -17,8 +17,7 @@ vector<string> splitStringMultiDelimit(string inputString)
     {
         pos = inputString.find_first_of(delims, beg + 1);
         string strnum = inputString.substr(beg, pos - beg);
-        //cout <<strnum  <<"\n";
-
+        
         strNums.push_back(strnum);
     }
 
@@ -32,7 +31,9 @@ void showException(int num)
 
 bool isValid(int num)
 {
-    if(num>=0)
+    if(num>1000)
+        return false;
+    else if(num>=0)
         return true;
 
     showException(num);
