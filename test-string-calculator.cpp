@@ -22,3 +22,14 @@ TEST_CASE("Test 4: 3 number with multi delimit") {
 TEST_CASE("Test 5: one negative num and 3 number with multi delimit") {
   cout << "Test 5 : " <<Add("-8,1\n2,3") <<"\n"; 
 }
+
+TEST_CASE("Test 6: 2 negative num and 3 number with multi delimit") {
+  cout << "Test 6 : " <<Add("-8,1\n2,-5,3") <<"\n"; 
+}
+
+TEST_CASE("Test 7: one num>1000 and 3 number with multi delimit") {
+  cout << "Test 7 : " <<Add("-8,1\n2,3,1001") <<"\n"; 
+}
+TEST_CASE("Test 8: 2 num>1000 and 3 number with multi delimit") {
+  cout << "Test 8 : " <<Add("-8,1003,1\n2,3,1001") <<"\n"; 
+}
