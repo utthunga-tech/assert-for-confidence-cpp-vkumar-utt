@@ -24,6 +24,19 @@ vector<string> splitStringMultiDelimit(string inputString)
     return strNums;
 }
 
+void showException(int num)
+{
+    cout<<"negatives not allowed : "<<num<<"\n";
+}
+
+bool isValid(int num)
+{
+    if(num>=0)
+        return true;
+
+    showException(num);
+    return false;
+}
 
 int Add(string numbers){
 
@@ -36,7 +49,11 @@ int Add(string numbers){
     {
         string strnum = *ptr;
         int i = atoi(strnum.c_str());
-        result = result + i;
+        bool valid = isValid(i);
+
+        if(valid)
+            result = result + i;
+        //result = result + i;
     }
 
     return result;
