@@ -18,3 +18,7 @@ TEST_CASE("Test 3: 2 number ") {
 TEST_CASE("Test 4: 3 number with multi delimit") {
   cout << "Test 1 : " <<Add("1\n2,3") <<"\n"; 
 }
+
+TEST_CASE("Test 5: one negative num and 3 number with multi delimit") {
+  cout << "Test 1 : " <<Add("-8,1\n2,3") <<"\n"; 
+}
