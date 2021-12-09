@@ -16,7 +16,7 @@ vector<string> splitStringMultiDelimit(string inputString)
     {
         pos = inputString.find_first_of(delims, beg + 1);
         string strnum = inputString.substr(beg, pos - beg);
-        std::cout <<strnum  << std::endl;
+        //cout <<strnum  <<"\n";
 
         strNums.push_back(strnum);
     }
