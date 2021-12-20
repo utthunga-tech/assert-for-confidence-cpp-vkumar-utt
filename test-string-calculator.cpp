@@ -33,3 +33,26 @@ TEST_CASE("Test 7: one num>1000 and 3 number with multi delimit") {
 TEST_CASE("Test 8: 2 num>1000 and 3 number with multi delimit") {
   cout << "Test 8 : " <<Add("1003,1\n2,3,1001") <<"\n"; 
 }
+
+
+TEST_CASE("Test : with delimeter ") {
+  int r9 = Add("//;\n1;2");
+  assert(r9==3);
+}
+
+TEST_CASE("Test 10: with delimeter ") {
+  int r10 = Add("//[***]\n1***2***3");
+  assert(r10==6);
+}
+
+TEST_CASE("Test 11: with multi delimeter ") {
+  int r11 = Add("//[*][%]\n1*2%3");
+  assert(r11==6);
+}
+
+TEST_CASE("Test 12: with delimeter with any lenghth") {
+  int r12 = Add("///[][%%]\n12%%3");
+  assert(r12==6);
+}
+
+
