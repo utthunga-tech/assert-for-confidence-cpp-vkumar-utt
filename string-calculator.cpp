@@ -1,6 +1,3 @@
-
-static vector<string> delimiter = {"\n",","};
-static bool emptyDelim = false;
 #include <iostream>
 #include <vector>
 #include <sstream>
@@ -8,6 +5,9 @@ static bool emptyDelim = false;
 #include <cstring>
 
 using namespace std;
+
+static vector<string> delimiter = {"\n",","};
+static bool emptyDelim = false;
 
 void printExpMessage(string message, int num)
 {
