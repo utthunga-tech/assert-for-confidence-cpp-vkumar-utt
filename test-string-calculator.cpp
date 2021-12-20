@@ -2,6 +2,7 @@
 
 #include "test/catch.hpp"
 #include "string-calculator.h"
+#include <assert.h>
 
 TEST_CASE("Test 1: zero number ") {
   cout << "Test 1 : " <<Add("")<<"\n"; 
