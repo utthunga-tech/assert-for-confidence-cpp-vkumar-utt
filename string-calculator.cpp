@@ -32,16 +32,22 @@ bool isNumberPositive(int num)
 
 bool isNumberValid(int num, void (*fp)(string s, int n))
 {
-    bool isThousand = isNumberAboveThousand(num);
-
-    bool isPositive=false;
+    bool isNumValid = false; 
     try {
-        isPositive = isNumberPositive(num);
+        isNumValid = isNumberPositive(num);
     } catch (invalid_argument& invalid) {
         fp(invalid.what(), num);
     }
 
-    if((!isThousand)&&(isPositive))
+    return isNumValid;
+}
+
+bool checkNumber(int num, void (*fp)(string s, int n))
+{
+    bool isNumValid = isNumberAboveThousand(num);
+
+    if(!isNumValid && isNumberValid(num, fp))
+
         return true;
 
     return false;
@@ -195,7 +201,7 @@ int Add(string numbers)
         void (*fp)(string s, int n);
         fp = printExpMessage;
 
-        bool valid = isNumberValid(i,fp);
+        bool valid = checkNumber(i,fp);
 
         if(valid)
             result = result + i;
