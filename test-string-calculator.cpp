@@ -51,7 +51,7 @@ TEST_CASE("Test 11: with multi delimeter ") {
   assert(r11==6);
 }
 
-/*TEST_CASE("Test 12: with delimeter with any lenghth") {
-  int r12 = Add("///[][%%]\n12%%3");
+TEST_CASE("Test 12: with delimeter with any lenghth") {
+  int r12 = Add("//[][%%]\n12%%3");
   assert(r12==6);
-}*/
+}
