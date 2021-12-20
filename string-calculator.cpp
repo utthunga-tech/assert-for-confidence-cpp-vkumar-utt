@@ -58,24 +58,6 @@ int convertStringtoNumber(string strnum)
     return atoi(strnum.c_str());;
 }
 
-vector<string> splitStringMultiDelimit(string inputString)
-{
-    string const delims{ "\n," };
-
-    vector<string> strNums;
-
-    size_t beg, pos = 0;
-    while ((beg = inputString.find_first_not_of(delims, pos)) != std::string::npos)
-    {
-        pos = inputString.find_first_of(delims, beg + 1);
-        string strnum = inputString.substr(beg, pos - beg);
-
-        strNums.push_back(strnum);
-    }
-
-    return strNums;
-}
-
 size_t findDelimiterPos(string s, size_t& len)
 {
     size_t pos = 0;
